@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Counter from "./useEffect/Counter";
+import CounterStep from "./useEffect/CounterStep";
+import Greeting from "./useEffect/Greeting";
+import SearchResults from "./useEffect/SearchResults";
+import UseEffectHook from "./useEffect/UseEffectHook";
+import UseEffectHook1 from "./useEffect/UseEffectHook1";
+import SearchResultsCallback from "./useCallback/SeachResultsCallback";
+import SearchResults1 from "./useEffect/SearchResults1";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/*  <UseEffectHook /> */}
+      {/*  <UseEffectHook1 /> */}
+      {/*   <Counter /> */}
+      {/* <Greeting name={"peter"} /> */}
+      {/*  <CounterStep /> */}
+      {/* <SearchResults /> */}
+      <SearchResults1 />
+      {/* <SearchResultsCallback /> */}
+    </>
   );
 }
 
