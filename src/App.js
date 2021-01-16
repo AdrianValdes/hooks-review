@@ -7,6 +7,8 @@ import UseEffectHook1 from "./useEffect/UseEffectHook1";
 import SearchResultsCallback from "./useCallback/SeachResultsCallback";
 import SearchResults1 from "./useEffect/SearchResults1";
 import AddColorForm from "./useRefs/addColorForm";
+import WordCount from "./useMemo/WordCount";
+import RequestGithubUser from "./dataRequest/RequestGithubUser";
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
       {/* <SearchResults /> */}
       {/* <SearchResults1 /> */}
       {/* <SearchResultsCallback /> */}
-      <AddColorForm />
+      {/* <AddColorForm /> */}
+      {/* <WordCount>You are not going to believe this</WordCount> */}
+      <RequestGithubUser />
     </>
   );
 }
