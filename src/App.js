@@ -6,6 +6,7 @@ import UseEffectHook from "./useEffect/UseEffectHook";
 import UseEffectHook1 from "./useEffect/UseEffectHook1";
 import SearchResultsCallback from "./useCallback/SeachResultsCallback";
 import SearchResults1 from "./useEffect/SearchResults1";
+import AddColorForm from "./useRefs/addColorForm";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
       {/* <Greeting name={"peter"} /> */}
       {/*  <CounterStep /> */}
       {/* <SearchResults /> */}
-      <SearchResults1 />
+      {/* <SearchResults1 /> */}
       {/* <SearchResultsCallback /> */}
+      <AddColorForm />
     </>
   );
 }
