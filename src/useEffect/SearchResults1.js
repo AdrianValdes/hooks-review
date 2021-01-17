@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 export default function SearchResults1() {
   const [data, setData] = useState({ hits: [] });
   const [query, setQuery] = useState("redux");
+
   const [url, setUrl] = useState(
     "https://hn.algolia.com/api/v1/search?query=redux"
   );
