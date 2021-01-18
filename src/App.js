@@ -12,6 +12,8 @@ import RequestGithubUser from "./dataRequest/RequestGithubUser";
 import faker from "faker";
 import List from "./RenderPropsList/List";
 import { FixedSizeList } from "react-window";
+
+import GithubUserWithCustomHook from "./dataRequest/GithubUserWithCustomHook";
 const bigList = [...Array(5000)].map(() => ({
   name: faker.name.findName(),
   email: faker.internet.email(),
@@ -39,14 +41,15 @@ function App() {
       {/* <SearchResultsCallback /> */}
       {/* <WordCount>You are not going to believe this</WordCount> */}
       {/* <RequestGithubUser /> */}
-      <FixedSizeList
+      <GithubUserWithCustomHook login={"AdrianValdes"} />
+      {/* <FixedSizeList
         height={window.innerHeight}
         width={window.innerWidth - 20}
         itemCount={bigList.length}
         itemSize={50}
       >
         {renderRow}
-      </FixedSizeList>
+      </FixedSizeList> */}
     </>
   );
 }
