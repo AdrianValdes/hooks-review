@@ -9,21 +9,44 @@ import SearchResults1 from "./useEffect/SearchResults1";
 import AddColorForm from "./useRefs/addColorForm";
 import WordCount from "./useMemo/WordCount";
 import RequestGithubUser from "./dataRequest/RequestGithubUser";
-
+import faker from "faker";
+import List from "./RenderPropsList/List";
+import { FixedSizeList } from "react-window";
+const bigList = [...Array(5000)].map(() => ({
+  name: faker.name.findName(),
+  email: faker.internet.email(),
+  avatar: faker.image.avatar(),
+}));
 function App() {
+  const renderRow = ({ index, style }) => (
+    <div style={{ ...style, ...{ display: "flex" } }}>
+      {/*  <img src={bigList[index].avatar} alt={bigList[index].name} width={50} /> */}
+      <p>
+        {bigList[index].name} - {bigList[index].email}
+      </p>
+    </div>
+  );
   return (
     <>
+      {/*  <Counter /> */}
+      {/*  <CounterStep /> */}
+      {/* <AddColorForm /> */}
+      {/* <Greeting name={"peter"} /> */}
       {/*  <UseEffectHook /> */}
       {/*  <UseEffectHook1 /> */}
-      {/*   <Counter /> */}
-      {/* <Greeting name={"peter"} /> */}
-      {/*  <CounterStep /> */}
       {/* <SearchResults /> */}
       {/* <SearchResults1 /> */}
       {/* <SearchResultsCallback /> */}
-      {/* <AddColorForm /> */}
       {/* <WordCount>You are not going to believe this</WordCount> */}
-      <RequestGithubUser />
+      {/* <RequestGithubUser /> */}
+      <FixedSizeList
+        height={window.innerHeight}
+        width={window.innerWidth - 20}
+        itemCount={bigList.length}
+        itemSize={50}
+      >
+        {renderRow}
+      </FixedSizeList>
     </>
   );
 }
